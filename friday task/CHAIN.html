@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function chain(value) {
+    return {
+        add(num) {
+            value = value + num;
+            return this;
+        },
+        subtract(num) {
+            value = value - num;
+            return this;
+        },
+        result() {
+            return value;
+        }
+    };
+}
+
+document.writeln(chain(5).add(2).subtract(1).result()); 
+</script>
+</body>
+</html>
